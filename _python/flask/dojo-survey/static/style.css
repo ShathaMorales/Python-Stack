@@ -1,0 +1,30 @@
+div {
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.heading {
+    font-family: sans-serif;
+    text-decoration: underline;
+    margin-left: 40px;
+}
+
+p {
+    font-family: sans-serif;
+    margin-left: 40px;
+}
+
+textarea {
+    margin-left: 40px;
+}
+
+.submit {
+    position: relative;
+    left: 80%;
+    font-family: sans-serif;
+    background-color: rgb(104, 164, 144);
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
