@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <style>
+
+        .container{
+            margin-top: 300px;
+            margin:0 auto;
+            text-align: center;
+        }
+
+        .box {
+            margin:0 auto;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border: 3px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Great Number Game</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!</p>
+        <!-- <div class="box">
+            {% if status %}
+            <p>{{ status }}</p>
+            {% endif %}
+        </div> -->
+        <form action="" method="post">
+        {% csrf_token %}
+        <p><input type="text" name="guess-box"></p>
+        <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

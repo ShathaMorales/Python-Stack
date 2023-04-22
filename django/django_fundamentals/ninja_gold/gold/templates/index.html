@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="count">
+        <h3>Your Gold</h3>
+        <input class="counter-box" type="number" disabled value="{{request.session.earnings}}">
+    </div>
+    <div class="main-box">
+        <div class="form">
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <h2>Farm</h2>
+                <p>(earns 10-20 gold)</p>
+                <input type="hidden" name="which_form" value="farm">
+                <input class="button" type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="form">
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <h2>Cave</h2>
+                <p>(earns 10-20 gold)</p>
+                <input type="hidden" name="which_form" value="cave">
+                <input class="button" type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="form">
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <h2>House</h2>
+                <p>(earns 10-20 gold)</p>
+                <input type="hidden" name="which_form" value="house">
+                <input class="button" type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="form">
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <h2>Quest</h2>
+                <p>(earns/takes 0-50 gold)</p>
+                <input type="hidden" name="which_form" value="quest">
+                <input class="button" type="submit" value="Find Gold!">
+            </form>
+        </div>
+    </div>
+    <div>
+        <h3 class="active">Activities</h3>
+        <div class="textarea">
+            {% for act in request.session.textarea %}
+            <p class="{{act.color}}">{{act.name}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

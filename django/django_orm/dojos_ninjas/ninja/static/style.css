@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+    color: grey;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 70px;
+    vertical-align: top;
+}
+
+.form-1 {
+    width: 35%;
+}
+
+.form-2 {
+    width: 35%;
+}
+
+h2 {
+    color: rgb(141, 139, 139);
+    text-align: center;
+}
+
+.inquiry {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#il {
+    font-weight: normal;
+    list-style-position: inside;
+}

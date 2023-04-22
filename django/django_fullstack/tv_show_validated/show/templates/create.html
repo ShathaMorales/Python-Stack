@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container w-50">
+        <div class="text-end p-2">
+            <a href="/shows">Go Back</a>
+        </div>
+        <div class="tbl card p-4 bg">
+            <h2 class="mb-3">TV SHOW {{shownum.id}}</h2>
+            <p>Title:{{shownum.title}}</p>
+            <p>Network: {{shownum.network}}</p>
+            <p>Release Date:{{shownum.release_date}}</p>
+            <p>Description: {{shownum.description}}</p>
+        </div>
+        <div>
+            <p class="mt-5">Last Updated: {{shownum.updated_at}}</p>
+            <a href="/shows/{{shownum.id}}/edit">Edit</a> |
+            <a href="/shows/{{shownum.id}}/delete">Delete</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

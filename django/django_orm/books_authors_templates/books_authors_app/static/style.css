@@ -1,0 +1,39 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(107, 106, 106);
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: top;
+    margin: 0 auto;
+    margin-top: 7rem;
+}
+
+.form {
+    width: 35%;
+}
+
+.tbl {
+    width: 35%;
+}
+
+.btn {
+    margin-top: 30px;
+}
+
+.title {
+    text-align: center;
+}
+
+#li {
+    font-weight: normal;
+    list-style: inside;
+}
+
+.preview {
+    margin-top: 7rem;
+    width: 70%;
+    margin: 0 auto;
+}

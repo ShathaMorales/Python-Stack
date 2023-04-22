@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div style="margin-top: 7rem;" class="preview card p-3 bg-light">
+        <div>
+            <h2>{{ booknum.title }}</h2>
+            <p>{{ booknum.id }}</p>
+            <p>{{ booknum.desc }}</p>
+        </div>
+        <div>
+            <ul style="font-weight: bold;">Authors
+                {% for author in booknum.authors.all %}
+                <li id="li">{{ author.first_name }} {{ author.last_name }}</li>
+                {% endfor %}
+            </ul> 
+            <form action="/addauthor/{{booknum.id}}" method="post">
+                {% csrf_token %}
+                <select name="author" class="form-select">
+                    {% for author in all_authors %}
+                    {% if author not in booknum.authors.all %}
+                    <option value="{{author.id}}">{{author.first_name}} {{ author.last_name}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <p class="d-grid gap-2 col-6 mx-auto"><input type="submit" class="btn btn-outline-primary" value="Add"></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

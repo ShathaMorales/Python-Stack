@@ -1,0 +1,46 @@
+.correct {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 70px;
+    margin: 0 auto;
+    color: white;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150px;
+    margin: 0 auto;
+    color: white;
+}
+
+body {
+    margin-top: 200px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.submit {
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 7px;
+    padding: 7px 20px;
+    background-color: gold;
+    font-weight: bold;
+}
+
+.input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px 15px;
+}

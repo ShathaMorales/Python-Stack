@@ -1,0 +1,12 @@
+* {
+    font-family: sans-serif;
+    color: rgb(107, 107, 107);
+}
+
+.network_date {
+    display: flex;
+}
+
+.container {
+    margin-top: 4rem;
+}
